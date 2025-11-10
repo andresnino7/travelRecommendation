@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Recommendation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="travel_recommendation.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Travel Recommendation</h1>
+      <ul class="nav-links">
+        <li><a href="travel_recommendation.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search ...">
+    <button id="searchBtn">Search</button>
+    <button id="clearBtn">Clean</button>
+  </div>
+
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Places</h2>
+    <p>beaches, countries around the world</p>
+    <button id="exploreBtn">Explore Now</button>
+  </section>
+
+  <main>
+    <section id="beach" class="recommendation">
+      <h2> Beach Recommendations</h2>
+      <div class="images">
+        <img src="img/playa1.jpg" alt="Beach 1">
+        <img src="img/playa2.jpg" alt="Beach 2">
+        <img src="img/playa3.jpg" alt="Beach 3">
+        <img src="img/playa4.jpg" alt="Beach 4">
+      </div>
+      <p>crystal-clear waters and golden</p>
+    </section>
+
+    <section id="temple" class="recommendation">
+      <h2> Temple Recommendations</h2>
+      <div class="images">
+        <img src="img/templo1.jpg" alt="Temple 1">
+        <img src="img/templo2.jpg" alt="Temple 2">
+        <img src="img/templo3.jpg" alt="Temple 3">
+      </div>
+      <p>breathtaking temples on the planet.</p>
+    </section>
+
+    <section id="country" class="recommendation">
+      <h2> Country Recommendations</h2>
+      <label for="countrySelect">Choose a country:</label>
+      <select id="countrySelect">
+        <option value="">--Select--</option>
+        <option value="mexico">Mexico</option>
+        <option value="japan">Japan</option>
+        <option value="colombia">Colombia</option>
+      </select>
+      <div id="countryResult"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Travel Recommendation</p>
+  </footer>
+</body>
+</html>
