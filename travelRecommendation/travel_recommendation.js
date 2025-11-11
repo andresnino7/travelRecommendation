@@ -20,53 +20,55 @@ clearBtn.addEventListener('click', () => {
 
 // --- Mostrar recomendaciones según búsqueda ---
 function showRecommendations(term) {
+  console.log("222");
+  console.log(term);
   const resultsContainer = document.getElementById('results') || document.querySelector('main');
   clearResults();
 
   if (term.includes('templo')) {
     const section = document.createElement('section');
     section.innerHTML = `
-      <h2>🛕 Temple Recommendations</h2>
+      <h2> Temple Recommendations</h2>
       <div class="images">
-        <img src="img/templo1.jpg" alt="Temple 1">
-        <img src="img/templo2.jpg" alt="Temple 2">
-        <img src="img/templo3.jpg" alt="Temple 3">
-        <img src="img/templo4.jpg" alt="Temple 4">
+        <img src="img/templo1.jpg" width="150px" alt="Temple 1">
+        <img src="img/templo2.jpg" width="150px" alt="Temple 2">
+        <img src="img/templo3.jpg" width="150px" alt="Temple 3">
       </div>
       <p>Discover ancient temples filled with history, spirituality, and beautiful architecture.</p>
     `;
-    resultsContainer.appendChild(section);
+    resultsContainer.prepend(section);
   } 
   else if (term.includes('país') || term.includes('pais')) {
     const section = document.createElement('section');
     section.innerHTML = `
-      <h2>🌎 Country Recommendations</h2>
+      <h2> Country Recommendations</h2>
       <div class="images">
-        <img src="img/mexico.jpg" alt="Mexico">
-        <img src="img/japon.jpg" alt="Japan">
+        <img src="img/mexico.jpg" width="150px" alt="Mexico">
+        <img src="img/japon.jpg" width="150px" alt="Japan">
+        <img src="img/colombia.jpg" width="150px" alt="Japan">
       </div>
       <p>Explore amazing countries full of culture, color, and unique destinations.</p>
     `;
-    resultsContainer.appendChild(section);
+    resultsContainer.prepend(section);
   } 
   else if (term.includes('playa')) {
     const section = document.createElement('section');
     section.innerHTML = `
-      <h2>🏖️ Beach Recommendations</h2>
+      <h2> Beach Recommendations</h2>
       <div class="images">
-        <img src="img/playa1.jpg" alt="Beach 1">
-        <img src="img/playa2.jpg" alt="Beach 2">
-        <img src="img/playa3.jpg" alt="Beach 3">
-        <img src="img/playa4.jpg" alt="Beach 4">
+        <img src="img/playa1.jpg" width="150px" alt="Beach 1">
+        <img src="img/playa2.jpg" width="150px" alt="Beach 2">
+        <img src="img/playa3.jpg" width="150px" alt="Beach 3">
+        <img src="img/playa4.jpg" width="150px" alt="Beach 4">
       </div>
       <p>Enjoy the most beautiful beaches with turquoise water and golden sands.</p>
     `;
-    resultsContainer.appendChild(section);
+    resultsContainer.prepend(section);
   } 
   else {
     const message = document.createElement('p');
     message.textContent = 'No results found. Try searching for "templo", "país" or "playa".';
-    resultsContainer.appendChild(message);
+    resultsContainer.prepend(message);
   }
 }
 
